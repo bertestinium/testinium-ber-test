@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Welcome — Testinium</title>
+  <style>
+    :root{ --bg:#f6f8fb; --card:#ffffff; --muted:#6b7280; --accent:#2563eb }
+    *{box-sizing:border-box}
+    body{margin:0;font-family:Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; background:var(--bg); color:#0f172a}
+    .wrap{min-height:100vh;display:flex;align-items:center;justify-content:center;padding:32px}
+    .card{background:var(--card);border-radius:14px;box-shadow:0 8px 30px rgba(2,6,23,0.08);padding:36px;max-width:900px;width:100%;display:flex;gap:28px;align-items:center}
+    .logo{width:120px;height:120px;flex:0 0 120px;display:flex;align-items:center;justify-content:center;border-radius:12px;background:linear-gradient(135deg,#eef2ff,#e0f2fe)}
+    .text{flex:1}
+    h1{margin:0;font-size:28px;letter-spacing:-0.02em}
+    p.lead{margin:8px 0 0;font-size:18px;color:var(--muted)}
+    .small{margin-top:14px;color:var(--muted);font-size:13px}
+    @media (max-width:640px){.card{flex-direction:column;align-items:flex-start}.logo{width:88px;height:88px;flex:0 0 88px}}
+    /* Watermark arka plan */
+    .watermark::before {
+      content:"";
+      position:absolute;
+      inset:0;
+      background:url('logo.png') center/60% no-repeat;
+      opacity:0.06;
+      pointer-events:none;
+    }
+</style>
+</head>
+<body>
+  <div class="wrap watermark">
+    <div class="card" role="region" aria-label="Welcome banner">
+      <div class="logo" aria-hidden="true">
+        <!-- Simple inline SVG company-style logo (placeholder) -->
+        <svg width="72" height="72" viewBox="0 0 72 72" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <rect width="72" height="72" rx="14" fill="url(#g)"/>
+          <defs>
+            <linearGradient id="g" x1="0" x2="72" y1="0" y2="72" gradientUnits="userSpaceOnUse">
+              <stop offset="0" stop-color="#2563eb"/>
+              <stop offset="1" stop-color="#7c3aed"/>
+            </linearGradient>
+          </defs>
+          <g opacity="0.98">
+            <circle cx="36" cy="30" r="12" fill="white"/>
+            <path d="M24 46c4-6 20-6 24 0" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+          </g>
+        </svg>
+      </div>
+
+      <div class="text">
+        <h1>Welcome To Testinium</h1>
+        <p class="lead">Hello, World!</p>
+        <p class="small">This is a simple welcome banner with a company logo placeholder. Replace the SVG or the image with your official logo file if you have one.</p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
+
